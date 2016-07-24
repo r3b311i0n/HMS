@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Windows;
+﻿using System.Windows;
 
 namespace HMS
 {
@@ -12,9 +7,10 @@ namespace HMS
     /// </summary>
     public partial class App : Application
     {
-        public App()
+        protected override void OnStartup(StartupEventArgs e)
         {
-           this.InitializeComponent();
+            new MainWindow().Show();
+            base.OnStartup(e);
         }
     }
 }
