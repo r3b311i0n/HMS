@@ -1,20 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using Telerik.Windows;
 using Telerik.Windows.Controls;
-using Telerik.Windows.Controls.Animation;
-using Telerik.Windows.Controls.TransitionControl;
 
 namespace HMS
 {
@@ -35,13 +25,17 @@ namespace HMS
 
         private void FadeIn(object sender, EventArgs e)
         {
-            var fadeAnimation = new DoubleAnimation {From = 0, Duration = new Duration(TimeSpan.FromSeconds(2.5))};
-            var unravelAnimation = new DoubleAnimation {From = 0, Duration = new Duration(TimeSpan.FromSeconds(2.5))};
-            EmailLabel.BeginAnimation(WidthProperty, unravelAnimation);
-            PwordLabel.BeginAnimation(WidthProperty, unravelAnimation);
-            EmailLabel.BeginAnimation(OpacityProperty, fadeAnimation);
-            PwordLabel.BeginAnimation(OpacityProperty, fadeAnimation);
+            var fadeAnimation = new DoubleAnimation { From = 0, Duration = new Duration(TimeSpan.FromSeconds(3)) };
+            //            var unravelAnimation = new DoubleAnimation {From = 0, Duration = new Duration(TimeSpan.FromSeconds(2.5))};
+            //            EmailLabel.BeginAnimation(WidthProperty, unravelAnimation);
+            //            PwordLabel.BeginAnimation(WidthProperty, unravelAnimation);
+            MailTextBox.BeginAnimation(OpacityProperty, fadeAnimation);
+            PasswordBox.BeginAnimation(OpacityProperty, fadeAnimation);
+            UnameTextBlock.BeginAnimation(OpacityProperty, fadeAnimation);
+            PasswordTextBlock.BeginAnimation(OpacityProperty, fadeAnimation);
+            logButton.BeginAnimation(OpacityProperty, fadeAnimation);
         }
+
         public static void ShowInTaskbar(RadWindow control, string title)
         {
             control.Show();
@@ -51,6 +45,22 @@ namespace HMS
             var uri = new Uri("pack://application:,,,/hms.png");
             window.Icon = BitmapFrame.Create(uri);
         }
-    }
 
+        private void PasswordBox_OnPasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (PasswordBox.Password.Length == 0)
+            {
+                PasswordTextBlock.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                PasswordTextBlock.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void LogButton_OnActivate(object sender, RadRoutedEventArgs e)
+        {
+            this.Close();
+        }
+    }
 }
