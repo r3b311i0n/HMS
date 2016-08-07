@@ -3,15 +3,13 @@ using System.CodeDom;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
-using Telerik.Windows;
-using Telerik.Windows.Controls;
 
 namespace HMS
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : RadWindow
+    public partial class MainWindow : Window
     {
         public MainWindow()
         {
@@ -41,10 +39,11 @@ namespace HMS
             }
         }
 
-        private void LogButton_OnActivate(object sender, RadRoutedEventArgs e)
+        private void LogButton_OnClick(object sender, RoutedEventArgs e)
         {
-            var blah = new DocLog();
-            blah.Show();
+            var addReceptionist = new AddReceptionist();
+            addReceptionist.Show();
+            Close();
         }
     }
 }
