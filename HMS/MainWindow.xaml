@@ -66,8 +66,8 @@
                  MaxLength="50"
                  MinLines="5"
                  TextWrapping="Wrap"
-                 ToolTip="Enter Username" />
-        <TextBlock x:Name="UnameTextBlock"
+                 ToolTip="Enter Email" />
+        <TextBlock x:Name="EmailTextBlock"
                    Margin="32,0,241,207"
                    VerticalAlignment="Bottom"
                    FontFamily="Avenir Next LT Pro"
@@ -76,7 +76,7 @@
                    Foreground="Purple"
                    OpacityMask="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"
                    RenderTransformOrigin="0.5,0.5"
-                   Text="Username"
+                   Text="Email"
                    TextDecorations="{x:Null}"
                    Visibility="{Binding Text.IsEmpty,
                                         Converter={StaticResource BooleanToVisibilityConverter},

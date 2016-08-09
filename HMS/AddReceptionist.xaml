@@ -43,7 +43,7 @@
                        Margin="10,168,0,0"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top"
-                       Content="First Name:"
+                       Content="* First Name:"
                        FontFamily="Avenir Next LT Pro"
                        FontSize="16" />
                 <Label x:Name="label1_Copy"
@@ -52,7 +52,7 @@
                        Margin="10,328,0,0"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top"
-                       Content="Email:"
+                       Content="* Email:"
                        FontFamily="Avenir Next LT Pro"
                        FontSize="16" />
                 <Label x:Name="label1_Copy1"
@@ -61,7 +61,7 @@
                        Margin="10,408,0,0"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top"
-                       Content="Password:"
+                       Content="* Password:"
                        FontFamily="Avenir Next LT Pro"
                        FontSize="16" />
 
@@ -71,7 +71,7 @@
                        Margin="10,248,0,0"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top"
-                       Content="Last Name:"
+                       Content="* Last Name:"
                        FontFamily="Avenir Next LT Pro"
                        FontSize="16" />
                 <Label x:Name="label1_Copy5"
@@ -90,7 +90,7 @@
                        Margin="10,488,0,0"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top"
-                       Content="Re-Enter Password:"
+                       Content="* Re-Enter Password:"
                        FontFamily="Avenir Next LT Pro"
                        FontSize="16" />
                 <TextBox x:Name="fNametxt"
@@ -165,7 +165,7 @@
                        Margin="0,328,0,0"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top"
-                       Content="Phone Number:"
+                       Content="* Phone Number:"
                        FontFamily="Avenir Next LT Pro"
                        FontSize="16" />
                 <TextBox x:Name="phonetxt"
@@ -208,7 +208,7 @@
                        Margin="0,246,0,0"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top"
-                       Content="NIC Number:"
+                       Content="* NIC Number:"
                        FontFamily="Avenir Next LT Pro"
                        FontSize="16" />
                 <Label x:Name="label1_Copy3"
@@ -217,7 +217,7 @@
                        Margin="0,166,0,0"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top"
-                       Content="Gender:"
+                       Content="* Gender:"
                        FontFamily="Avenir Next LT Pro"
                        FontSize="16" />
                 <TextBox x:Name="nictxt"
