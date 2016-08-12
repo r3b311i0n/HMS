@@ -115,7 +115,7 @@ namespace HMS
             using (var conn = new SqlConnection())
             {
                 conn.ConnectionString =
-                    @"Data Source = R3831-3NVY\SQLEXPRESS; Initial Catalog = hms; Integrated Security = True;";
+                    @"Data Source = localhost\SQLEXPRESS; Initial Catalog = hms; Integrated Security = True;";
 
                 var comm = new SqlCommand("INSERT INTO [dbo].[Receptionist]([fName], [lName], [nic], [gender], [email], [phone], [address], [password]) VALUES(@fname, @lname, @nic, @gender, @email, @phone, @address, @password);", conn);
 

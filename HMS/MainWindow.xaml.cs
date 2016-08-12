@@ -51,7 +51,7 @@ namespace HMS
             using (var conn = new SqlConnection())
             {
                 conn.ConnectionString =
-                    @"Data Source = R3831-3NVY\SQLEXPRESS; Initial Catalog = hms; Integrated Security = True;";
+                    @"Data Source = localhost\SQLEXPRESS; Initial Catalog = hms; Integrated Security = True;";
 
                 var comm = new SqlCommand("SELECT [email], [password] FROM [dbo].[Receptionist] WHERE [email] = @mail;", conn);
                 comm.Parameters.AddWithValue("@mail", email);
